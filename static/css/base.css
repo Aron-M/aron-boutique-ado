@@ -1,12 +1,12 @@
 html {
-    height: 100%
+    height: 100%;
 }
 
-body{
+body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
-    height:calc(100vh - 164px);
-    color: #5555;
+    height: calc(100vh - 164px);
+    color: #555;
     font-family: 'Lato';
 }
 
@@ -40,8 +40,15 @@ body{
 
 .btn-outline-black {
     background: white;
-    color: black !important;
+    color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .shop-now-button:hover,
@@ -67,13 +74,13 @@ body{
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
@@ -95,11 +102,13 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* ------------------------------- bootstrap toasts */
+
 .message-container {
     position: fixed;
-    top: 720px;
+    top: 72px;
     right: 15px;
-    z-index: 9999999;
+    z-index: 99999999999;
 }
 
 .custom-toast {
@@ -109,7 +118,6 @@ a.category-badge > span.badge:hover {
 .toast-capper {
     height: 2px;
 }
-
 
 /* -------------------------------- Media Queries */
 
@@ -138,7 +146,7 @@ a.category-badge > span.badge:hover {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 136px;
+        padding-top: 116px;
     }
 
     body {
